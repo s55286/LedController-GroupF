@@ -1,0 +1,18 @@
+Sprint Planning:
+welche Stories aus dem Backlog werden in dieser Iteration
+ umgesetzt?
+ Story 1.3
+ Story 2.1
+
+Falls noch zeit: 2.2
+
+ Aufwand (gemeinsam!) abschätzen - eventuell Stories in kleinere
+ Tasks unterteilen
+ nichts einzeln aufgeteilt
+
+ Festlegen, welches Paar welche Tasks erledigt:
+ Christina + Oli: 1.3 fertig machen
+ Aurela + Anna: 2.1
+
+ welche Stories hängen von anderen Stories ab?
+ keine Abhängigkeiten
