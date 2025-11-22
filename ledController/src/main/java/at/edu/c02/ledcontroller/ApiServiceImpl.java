@@ -22,35 +22,38 @@ public class ApiServiceImpl implements ApiService {
      * @return `getLights` response JSON object
      * @throws IOException Throws if the request could not be completed successfully
      */
+
+        @Override
+        public JSONObject getLights() throws IOException {
+        return sendRequest("https://balanced-civet-91.hasura.app/api/rest/getLights");
+    }
+
     @Override
-    public JSONObject getLights() throws IOException
-    {
-        // Connect to the server
-        URL url = new URL("https://balanced-civet-91.hasura.app/api/rest/getLights");
+    public JSONObject getLight(int id) throws IOException {
+        return sendRequest("https://balanced-civet-91.hasura.app/api/rest/getLight?id=" + id);
+    }
+
+    private JSONObject sendRequest(String urlString) throws IOException {
+        URL url = new URL(urlString);
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-        // and send a GET request
+
         connection.setRequestMethod("GET");
         connection.setRequestProperty("X-Hasura-Group-ID", "Todo");
-        // Read the response code
+
         int responseCode = connection.getResponseCode();
-        if(responseCode != HttpURLConnection.HTTP_OK) {
-            // Something went wrong with the request
-            throw new IOException("Error: getLights request failed with response code " + responseCode);
+        if (responseCode != HttpURLConnection.HTTP_OK) {
+            throw new IOException("Request failed with response code " + responseCode);
         }
 
-        // The request was successful, read the response
         BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-        // Save the response in this StringBuilder
         StringBuilder sb = new StringBuilder();
 
         int character;
-        // Read the response, character by character. The response ends when we read -1.
-        while((character = reader.read()) != -1) {
+        while ((character = reader.read()) != -1) {
             sb.append((char) character);
         }
 
-        String jsonText = sb.toString();
-        // Convert response into a json object
-        return new JSONObject(jsonText);
+        return new JSONObject(sb.toString());
     }
+
 }
