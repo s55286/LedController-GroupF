@@ -19,3 +19,17 @@ Sprint planning:
 
  welche Stories hängen von anderen Stories ab?
  1.2 hängt von 1.1 ab
+
+
+Daily 1:
+Wie gehts euch?
+Anna + Christina, schon sportlich die Zeit,
+Oliver: joa Zeit war sportlich, so viel ist noch nicht passiert
+
+Was machts gerade?
+Anna + Christina: Einzelstatusabfrage wurde gemacht, muss noch geschaut werden ob es geht
+Oliver: bin gerade dabei den Test zu erstellen
+
+wie gehts weiter?
+Anna + Christina: schauen obs geht, pushed und dann supporten
+Oliver: werde beim Test weitermachen und danach die Funktionalität machen
