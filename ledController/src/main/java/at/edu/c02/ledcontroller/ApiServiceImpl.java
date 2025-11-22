@@ -24,6 +24,13 @@ public class ApiServiceImpl implements ApiService {
      * @throws IOException Throws if the request could not be completed successfully
      */
 
+
+    private String loadSecret() throws IOException {
+        java.nio.file.Path path = java.nio.file.Paths.get("secret.txt");
+        return java.nio.file.Files.readString(path).trim();
+    }
+
+
         @Override
         public JSONObject getLights() throws IOException {
         return sendRequest("https://balanced-civet-91.hasura.app/api/rest/getLights");
@@ -72,7 +79,9 @@ public class ApiServiceImpl implements ApiService {
 
         connection.setRequestMethod("PUT");
         connection.setRequestProperty("Content-Type", "application/json");
-        connection.setRequestProperty("X-Hasura-Group-ID", "moi555hnFEffaf");
+
+        String secret = loadSecret();
+        connection.setRequestProperty("X-Hasura-Group-ID", secret);
         connection.setDoOutput(true);
 
 
