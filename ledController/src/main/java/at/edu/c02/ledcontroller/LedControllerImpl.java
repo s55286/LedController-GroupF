@@ -47,8 +47,9 @@ public class LedControllerImpl implements LedController {
 
     @Override
     public void status(int id) throws IOException {
-        JSONObject led = apiService.getLight(id);
-
+        JSONObject response = apiService.getLight(id);
+        JSONArray lights = response.getJSONArray("lights");
+        JSONObject led = lights.getJSONObject(0);
         boolean on = led.getBoolean("on");
         String color = led.getString("color");
 
