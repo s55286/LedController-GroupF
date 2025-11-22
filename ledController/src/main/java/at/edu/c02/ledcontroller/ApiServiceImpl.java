@@ -31,7 +31,7 @@ public class ApiServiceImpl implements ApiService {
 
     @Override
     public JSONObject getLight(int id) throws IOException {
-        return sendRequest("https://balanced-civet-91.hasura.app/api/rest/getLight?id=" + id);
+        return sendRequest("https://balanced-civet-91.hasura.app/api/rest/lights/" + id);
     }
 
     @Override
