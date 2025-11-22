@@ -24,14 +24,14 @@ public class Main {
             if (input.equalsIgnoreCase("demo")) {
                 ledController.demo();
             } else if (input.equalsIgnoreCase("groupstatus")) {
-                ledController.groupStatus();   // ⬅️ NEU
+                ledController.groupStatus();
             } else if (input.equalsIgnoreCase("status")) {
                 System.out.println("Please specify LED ID:");
                 String idStr = reader.readLine();
 
                 try {
                     int id = Integer.parseInt(idStr);
-                    ledController.status(id); // ⬅️ NEU
+                    ledController.status(id);
                 } catch (NumberFormatException e) {
                     System.out.println("Invalid ID");
                 }
