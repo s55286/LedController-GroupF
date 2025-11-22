@@ -22,7 +22,7 @@ public class Main {
             System.out.println("Enter 'groupstatus' to show the status of all LEDs in the group");
             System.out.println("Enter 'status' to show the status of a single LED");
             System.out.println("Enter 'setled' to modify a LED");
-            System.out.println("Enter 'spinningled' to show spinning LEDs");
+            System.out.println("Enter 'runningled' to show spinning LEDs");
             System.out.println("Enter 'exit' to exit the program");
             input = reader.readLine();
 
@@ -59,7 +59,7 @@ public class Main {
                 } catch (Exception e) {
                     System.out.println("Error updating LED: " + e.getMessage());
                 }
-            } else if (input.equalsIgnoreCase("spinningled")) {
+            } else if (input.equalsIgnoreCase("runningled")) {
                 System.out.println("Which color?");
                 String color = reader.readLine();
                 System.out.println("How many turns?");
