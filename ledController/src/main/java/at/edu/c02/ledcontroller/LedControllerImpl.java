@@ -85,10 +85,9 @@ public class LedControllerImpl implements LedController {
     }
 
     @Override
-    public void turnOffAllLeds() {
+    public void turnOffAllLeds() throws IOException{
         for (int id : GROUP_LED_IDS) {
-            //apiService.setLight(id, "#000000" false);
-            System.out.println("Set light function in progress");
+            set(id, "#000000", false);
         }
     }
 }

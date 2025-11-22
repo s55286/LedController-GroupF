@@ -21,6 +21,7 @@ public class Main {
             System.out.println("Enter 'groupstatus' to show the status of all LEDs in the group");
             System.out.println("Enter 'status' to show the status of a single LED");
             System.out.println("Enter 'set' to modify a LED");
+            System.out.println("Enter 'turnOff' to modify a LED");
             System.out.println("Enter 'exit' to exit the program");
             input = reader.readLine();
 
