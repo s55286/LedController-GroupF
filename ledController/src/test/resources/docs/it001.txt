@@ -46,3 +46,15 @@ Oliver: verusche das problem zu lösen und werde whs einen Professor fragen
 wie gehts weiter?
 Anna + Christina: wenn Aurela weiß wie der aktuelle Stand ist, fangen sie zu dritt mit 1.3 an
 Oliver: test sollte funktionieren
+
+
+Retrospektive:
+wie ist der Sprint gelaufen?
+Anna: nicht gut, weil Oli probleme hatte
+anna und christina haben dann noch 1.3 veruscht und hatten eine Expection - sie hoffen dass sie es beim nächsten mal beheben können
+Oli: grundsätzlich gut hatte nur ein paar denkfehler bzgl. den requests, war recht wenig zeit für alle zum erledigen
+wurde alles geschafft?
+grundsätzlich ja, 1.3 ist nicht fertig, wurde aber auch im Planning nicht dazugenommen und war lediglich wenn Zeit ist
+
+ was kann in den nächsten Sprints verbessert werden?
+ gar nicht so viel, das aktuelle Pensum zu erhalten und nicht vergessen eigene Branches zu erstellen
