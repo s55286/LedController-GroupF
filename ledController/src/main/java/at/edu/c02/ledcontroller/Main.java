@@ -3,6 +3,7 @@ package at.edu.c02.ledcontroller;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.sql.SQLOutput;
 
 public class Main {
     /**
@@ -21,6 +22,7 @@ public class Main {
             System.out.println("Enter 'groupstatus' to show the status of all LEDs in the group");
             System.out.println("Enter 'status' to show the status of a single LED");
             System.out.println("Enter 'setled' to modify a LED");
+            System.out.println("Enter 'spinningled' to show spinning LEDs");
             System.out.println("Enter 'exit' to exit the program");
             input = reader.readLine();
 
@@ -57,6 +59,14 @@ public class Main {
                 } catch (Exception e) {
                     System.out.println("Error updating LED: " + e.getMessage());
                 }
+            } else if (input.equalsIgnoreCase("spinningled")) {
+                System.out.println("Which color?");
+                String color = reader.readLine();
+                System.out.println("How many turns?");
+                int turns = Integer.parseInt(reader.readLine());
+                System.out.println("Starting SpinningLed effect...");
+                ledController.runningLight(color, turns);
+                System.out.println("Finished SpinningLed effect...");
             }
         }
     }
