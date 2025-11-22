@@ -29,4 +29,30 @@ public class LedControllerImpl implements LedController {
         System.out.println("First light id is: " + firstLight.getInt("id"));
         System.out.println("First light color is: " + firstLight.getString("color"));
     }
+
+    @Override
+    public void groupStatus() throws IOException {
+        JSONObject json = apiService.getLights();
+
+        for (Object obj : json.getJSONArray("lights")) {
+            var led = (JSONObject) obj;
+            int id = led.getInt("id");
+            boolean on = led.getBoolean("on");
+            String color = led.getString("color");
+
+            System.out.println("LED " + id + " is currently " + (on ? "on" : "off") +
+                    ". Color: " + color + ".");
+        }
+    }
+
+    @Override
+    public void status(int id) throws IOException {
+        JSONObject led = apiService.getLight(id);
+
+        boolean on = led.getBoolean("on");
+        String color = led.getString("color");
+
+        System.out.println("LED " + id + " is currently " + (on ? "on" : "off")
+                + ". Color: " + color + ".");
+    }
 }
