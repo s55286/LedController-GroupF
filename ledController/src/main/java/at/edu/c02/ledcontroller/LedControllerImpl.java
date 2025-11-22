@@ -65,6 +65,24 @@ public class LedControllerImpl implements LedController {
     }
 
     @Override
+    public void runningLight(String color, int turns) throws IOException {
+        turnOffAllLeds();
+        for(int i = 0; i < turns; i++){
+            for (int id : GROUP_LED_IDS) {
+                set(id, color, true);
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                   Thread.currentThread().interrupt();
+                   return;
+                }
+                set(id, "#000000", false);
+            }
+        }
+        turnOffAllLeds();
+    }
+
+    @Override
     public JSONArray getGroupLeds() throws IOException {
         JSONObject response = apiService.getLights();
         System.out.println(response);
