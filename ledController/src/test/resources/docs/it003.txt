@@ -17,11 +17,10 @@ Optional 2.5
 2.5 & 2.2 hängen von 2.1 ab
 
 Daily 1:
-
-
 Was machts gerade?
-
+2.1 fixen, doof weil keine fehlermeldung
 wie gehts weiter?
+professor fragen wo das problem liegt
 
 Daily 2:
 
