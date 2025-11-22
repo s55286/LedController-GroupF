@@ -1,0 +1,14 @@
+Sprint planning:
+
+ welche Stories aus dem Backlog werden in dieser Iteration
+ umgesetzt?
+
+
+ Aufwand (gemeinsam!) abschätzen - eventuell Stories in kleinere
+ Tasks unterteilen
+
+
+ Festlegen, welches Paar welche Tasks erledigt
+
+
+ welche Stories hängen von anderen Stories ab?
