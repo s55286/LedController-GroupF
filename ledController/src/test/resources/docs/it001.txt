@@ -2,13 +2,20 @@ Sprint planning:
 
  welche Stories aus dem Backlog werden in dieser Iteration
  umgesetzt?
+ Story 1.1
+ Story 1.2
 
 
  Aufwand (gemeinsam!) abschätzen - eventuell Stories in kleinere
  Tasks unterteilen
+ Story 1.2 in kleinere Tasks aufteilen 1 x Test und 1 x Funktionalität
+
 
 
  Festlegen, welches Paar welche Tasks erledigt
+ Anna und Tina machen 1.1, Oli macht 1.2
+ Startet mit Test und wenn 1.1 fertig die Funktionalität
 
 
  welche Stories hängen von anderen Stories ab?
+ 1.2 hängt von 1.1 ab
