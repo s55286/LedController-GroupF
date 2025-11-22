@@ -72,7 +72,7 @@ public class ApiServiceImpl implements ApiService {
 
         connection.setRequestMethod("PUT");
         connection.setRequestProperty("Content-Type", "application/json");
-        connection.setRequestProperty("X-Hasura-Group-ID", "A03NyNmQMg");
+        connection.setRequestProperty("X-Hasura-Group-ID", "moi555hnFEffaf");
         connection.setDoOutput(true);
 
 
