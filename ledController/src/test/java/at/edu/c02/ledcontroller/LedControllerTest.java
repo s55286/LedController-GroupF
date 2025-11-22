@@ -49,5 +49,17 @@ public class LedControllerTest {
         verifyNoMoreInteractions(api);
     }
 
+    @Test
+    public void testRunningLight() throws Exception {
+        ApiService api = mock(ApiService.class);
+        LedControllerImpl controller = new LedControllerImpl(api);
+        controller.runningLight("#ff0000", 1);
+        for(int id : LedControllerImpl.GROUP_LED_IDS) {
+            verify(api, times(3)).setLight(id, "#000000", false);
+            verify(api, times(1)).setLight(id, "#ff0000", true);
+        }
+
+        verifyNoMoreInteractions(api);
+    }
 
 }
