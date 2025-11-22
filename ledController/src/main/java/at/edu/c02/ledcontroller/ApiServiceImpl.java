@@ -34,6 +34,16 @@ public class ApiServiceImpl implements ApiService {
         return sendRequest("https://balanced-civet-91.hasura.app/api/rest/lights/" + id);
     }
 
+    @Override
+    public JSONObject setLight(int id, String color, boolean status) throws IOException {
+        JSONObject body = new JSONObject();
+        body.put("id", id);
+        body.put("color", color);
+        body.put("state", status);
+
+        return sendPutRequest("https://balanced-civet-91.hasura.app/api/rest/setLight", body);
+    }
+
     private JSONObject sendRequest(String urlString) throws IOException {
         URL url = new URL(urlString);
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
@@ -51,6 +61,34 @@ public class ApiServiceImpl implements ApiService {
         int character;
         while ((character = reader.read()) != -1) {
             sb.append((char) character);
+        }
+
+        return new JSONObject(sb.toString());
+    }
+
+    private JSONObject sendPutRequest(String urlString, JSONObject body) throws IOException {
+        URL url = new URL(urlString);
+        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+
+        connection.setRequestMethod("PUT");
+        connection.setRequestProperty("Content-Type", "application/json");
+        connection.setRequestProperty("X-Hasura-Group-ID", "moi555hnFEffaf");
+        connection.setDoOutput(true);
+
+
+        connection.getOutputStream().write(body.toString().getBytes());
+
+        int responseCode = connection.getResponseCode();
+        if (responseCode != HttpURLConnection.HTTP_OK) {
+            throw new IOException("PUT request failed with code: " + responseCode);
+        }
+
+        BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+        StringBuilder sb = new StringBuilder();
+
+        int ch;
+        while ((ch = reader.read()) != -1) {
+            sb.append((char) ch);
         }
 
         return new JSONObject(sb.toString());
