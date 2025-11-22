@@ -11,11 +11,15 @@ welche Stories hängen von anderen Stories ab?
 keine wirklichen abhängigkeiten, außer 2.4 von 2.3
 
 Daily 1:
-
-
+Wie gehts euch?
+Aurela + Anna Sind sich etwas unsicher da der Branch nicht aktuell ist und merge conflict ist
+Christina + Oliver: uns gehts sehr gut, kommen erschreckend gut voran
 Was machts gerade?
-
+Anna + Aurela: haben 3.1 gleich fertig
+Christina + Oliver: sind gerade beim running light, der test macht noch probleme aber es funktioniert
 wie gehts weiter?
+Anna + Aurela: machen das noch schnell fertig
+christina + Oliver: test noch fixen, und dann schauma wieviel zeit noch bleibt evtl. spinninglight
 
 Daily 2:
 
