@@ -10,6 +10,7 @@ import java.io.IOException;
  */
 public class LedControllerImpl implements LedController {
     private final ApiService apiService;
+    public static final int[] GROUP_LED_IDS = { 36, 37, 38, 39,40,41,42,43 };
 
     public LedControllerImpl(ApiService apiService)
     {
@@ -75,5 +76,13 @@ public class LedControllerImpl implements LedController {
         }
 
         return group;
+    }
+
+    @Override
+    public void turnOffAllLeds() {
+        for (int id : GROUP_LED_IDS) {
+            //apiService.setLight(id, "#000000" false);
+            System.out.println("Set light function in progress");
+        }
     }
 }

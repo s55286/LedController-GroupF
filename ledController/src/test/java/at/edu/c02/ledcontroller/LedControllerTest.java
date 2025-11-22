@@ -3,6 +3,8 @@ package at.edu.c02.ledcontroller;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.junit.Test;
+import org.mockito.Mockito;
+
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.*;
 
@@ -32,4 +34,19 @@ public class LedControllerTest {
 
         verify(apiService).getLights();
     }
+
+    public void testTurnOffAllLeds() throws Exception{
+        ApiService api = mock(ApiService.class);
+        LedControllerImpl controller = new LedControllerImpl(api);
+
+        controller.turnOffAllLeds();
+
+      for (int id : LedControllerImpl.GROUP_LED_IDS) {
+          verify(api).setLight(id, "#000000",false);
+      }
+
+    }
+
+
+
 }
