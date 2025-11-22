@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import org.json.JSONArray;
 
 /**
  * This class should handle all HTTP communication with the server.
@@ -30,7 +31,7 @@ public class ApiServiceImpl implements ApiService {
 
     @Override
     public JSONObject getLight(int id) throws IOException {
-        return sendRequest("https://balanced-civet-91.hasura.app/api/rest/getLight?id=" + id);
+        return sendRequest("https://balanced-civet-91.hasura.app/api/rest/lights/" + id);
     }
 
     private JSONObject sendRequest(String urlString) throws IOException {
@@ -38,7 +39,6 @@ public class ApiServiceImpl implements ApiService {
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 
         connection.setRequestMethod("GET");
-        connection.setRequestProperty("X-Hasura-Group-ID", "F");
 
         int responseCode = connection.getResponseCode();
         if (responseCode != HttpURLConnection.HTTP_OK) {

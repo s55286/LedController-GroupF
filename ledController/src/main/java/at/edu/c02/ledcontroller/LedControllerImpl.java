@@ -31,6 +31,33 @@ public class LedControllerImpl implements LedController {
     }
 
     @Override
+    public void groupStatus() throws IOException {
+        JSONObject json = apiService.getLights();
+
+        for (Object obj : json.getJSONArray("lights")) {
+            var led = (JSONObject) obj;
+            int id = led.getInt("id");
+            boolean on = led.getBoolean("on");
+            String color = led.getString("color");
+
+            System.out.println("LED " + id + " is currently " + (on ? "on" : "off") +
+                    ". Color: " + color + ".");
+        }
+    }
+
+    @Override
+    public void status(int id) throws IOException {
+        JSONObject response = apiService.getLight(id);
+        JSONArray lights = response.getJSONArray("lights");
+        JSONObject led = lights.getJSONObject(0);
+        boolean on = led.getBoolean("on");
+        String color = led.getString("color");
+
+        System.out.println("LED " + id + " is currently " + (on ? "on" : "off")
+                + ". Color: " + color + ".");
+    }
+
+    @Override
     public JSONArray getGroupLeds() throws IOException {
         JSONObject response = apiService.getLights();
         System.out.println(response);
