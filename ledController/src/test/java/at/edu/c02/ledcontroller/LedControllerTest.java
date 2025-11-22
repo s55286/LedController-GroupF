@@ -1,8 +1,10 @@
 package at.edu.c02.ledcontroller;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
+import static org.mockito.Mockito.*;
 
 
 public class LedControllerTest {
@@ -13,5 +15,22 @@ public class LedControllerTest {
     @Test
     public void dummyTest() {
         assertEquals(1, 1);
+    }
+
+    @Test
+    public void testGetGroupLeds() throws Exception {
+
+        ApiServiceImpl apiService = mock(ApiServiceImpl.class);
+        JSONObject fake = new JSONObject("""
+        { "lights": [ {"id": 13, "color":"#fff", "on":true} ] }
+    """);
+
+        when(apiService.getLights()).thenReturn(fake);
+
+        LedController controller = new LedControllerImpl(apiService);
+        JSONArray result = controller.getGroupLeds();
+
+        verify(apiService).getLights();
+        assertEquals(1, result.length());
     }
 }
