@@ -12,4 +12,5 @@ public interface LedController {
     void turnOffAllLeds() throws IOException;
     void set(int id, String color, boolean status) throws IOException;
     void runningLight(String color, int turns) throws IOException;
+    void spinningWheel (int steps) throws IOException;
 }

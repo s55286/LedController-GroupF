@@ -4,6 +4,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.util.*;
 
 /**
  * This class handles the actual logic
@@ -80,6 +81,45 @@ public class LedControllerImpl implements LedController {
             }
         }
         turnOffAllLeds();
+    }
+
+    @Override
+    public void spinningWheel(int steps) throws IOException {
+        // 1. aktuellen Zustand auslesen
+        Map<Integer, String> currentColors = new HashMap<>();
+        JSONArray leds = getGroupLeds();
+        for (int i = 0; i < leds.length(); i++) {
+            JSONObject led = leds.getJSONObject(i);
+            int id = led.getInt("id");
+            String color = led.getString("color");
+            currentColors.put(id, color);
+        }
+        List<Integer> sortedLeds = new ArrayList<>(currentColors.keySet());
+        Collections.sort(sortedLeds);
+
+        // 3. Spinning Effekt
+        for (int step = 0; step < steps; step++) {
+            // Farben um einen Platz nach rechts verschieben
+            String lastColor = currentColors.get(sortedLeds.get(sortedLeds.size() - 1));
+            for (int i = sortedLeds.size() - 1; i > 0; i--) {
+                int id = sortedLeds.get(i);
+                int prevId = sortedLeds.get(i - 1);
+                currentColors.put(id, currentColors.get(prevId));
+            }
+            currentColors.put(sortedLeds.get(0), lastColor);
+
+            // LEDs aktualisieren
+            for (int id : sortedLeds) {
+                set(id, currentColors.get(id), true);
+            }
+
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+                return;
+            }
+        }
     }
 
     @Override
