@@ -31,9 +31,13 @@ Anna + Aurela: 2.1 Testen
 Christina & Oliver: 2.2 fertig gemacht test funktioniert
 
 wie gehts weiter?
-
+farben einfärben und testen testen testen
 
 Retrospektive:
 wie ist der Sprint gelaufen?
+Leiharbeitsfirma war unzuverlässig, probleme mit dem Secret
+abgesehen davon hat alles toll geklappt
 wurde alles geschafft?
+ja, sogar die optionalen Tasks wurden abgeschlossen
 was kann in den nächsten Sprints verbessert werden?
+neue Leihfirma nehmen :D
