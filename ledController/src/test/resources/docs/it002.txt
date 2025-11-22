@@ -22,3 +22,16 @@ Falls noch zeit: 2.2
  ApiService Interface erweitert und gerade fangen wir mit der Methode an.
 
  Oliver+Tina: Wir haben 1.3 trotz den Schwierigkeiten gefixed. Wir beginnen jetzt mit 2.2.
+
+ Retrospektive:
+ wie ist der Sprint gelaufen?
+ Anna + Aurela: nicht gut, weil 2.1 probleme macht
+ Christina + Oliver: grundsätzlich gut 1.3 war zwar anstregnend funktioniert jetzt aber. und 2.2 wurde auch schon angefangen
+ Oliver: Abhängigkeit zwischen 2.1 & 2.2 wurde im Planning nicht erkannt, dadurch wartet 2.2 jetzt auf 2.1
+
+ wurde alles geschafft?
+ nein, leider nicht
+
+ was kann in den nächsten Sprints verbessert werden?
+ in den Plannings mehr Zeit einplanen und mehr auf Abhängigkeiten schauen
+ einander mehr helfen wenn probleme vorhanden
