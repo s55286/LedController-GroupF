@@ -16,3 +16,9 @@ Falls noch zeit: 2.2
 
  welche Stories hängen von anderen Stories ab?
  keine Abhängigkeiten
+
+ Daily 3:
+ Anna+Aurela: Wir haben das Gruppen Secret angefordert und warten momentan darauf. Jetzt haben wir 2.1 begonnen, die
+ ApiService Interface erweitert und gerade fangen wir mit der Methode an.
+
+ Oliver+Tina: Wir haben 1.3 trotz den Schwierigkeiten gefixed. Wir beginnen jetzt mit 2.2.
