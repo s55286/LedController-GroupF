@@ -5,7 +5,7 @@ import org.json.JSONObject;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-public class LedControllerE2ETest {
+public class LedControllerE2EIT {
 
     @Test
     public void testSetAndGetLightE2E() throws Exception {
