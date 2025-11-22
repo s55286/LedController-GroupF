@@ -33,3 +33,16 @@ Oliver: bin gerade dabei den Test zu erstellen
 wie gehts weiter?
 Anna + Christina: schauen obs geht, pushed und dann supporten
 Oliver: werde beim Test weitermachen und danach die Funktionalität machen
+
+Daily 2:
+Wie gehts euch?
+Anna + Christina: sind mit 1.1 fertig
+Oliver: hab gerade ein problem mit dem getLights.
+
+Was machts gerade?
+Anna + Christina: updaten gerade Aurela
+Oliver: verusche das problem zu lösen und werde whs einen Professor fragen
+
+wie gehts weiter?
+Anna + Christina: wenn Aurela weiß wie der aktuelle Stand ist, fangen sie zu dritt mit 1.3 an
+Oliver: test sollte funktionieren
