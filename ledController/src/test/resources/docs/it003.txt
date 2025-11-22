@@ -1,0 +1,37 @@
+Sprint planning:
+
+ welche Stories aus dem Backlog werden in dieser Iteration umgesetzt?
+2.1
+2.2
+Optional 2.5
+
+ Aufwand (gemeinsam!) abschätzen - eventuell Stories in kleinere Tasks unterteilen
+
+
+ Festlegen, welches Paar welche Tasks erledigt
+2.1 alle shcauen dass problem gefunden wird
+2.2 Oliver + Christina
+2.5. Anna + Aurela wenn Zeit
+
+ welche Stories hängen von anderen Stories ab?
+2.5 & 2.2 hängen von 2.1 ab
+
+Daily 1:
+
+
+Was machts gerade?
+
+wie gehts weiter?
+
+Daily 2:
+
+
+Was machts gerade?
+
+wie gehts weiter?
+
+
+Retrospektive:
+wie ist der Sprint gelaufen?
+wurde alles geschafft?
+was kann in den nächsten Sprints verbessert werden?
