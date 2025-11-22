@@ -20,8 +20,7 @@ public class Main {
             System.out.println("Enter 'demo' to send a demo request");
             System.out.println("Enter 'groupstatus' to show the status of all LEDs in the group");
             System.out.println("Enter 'status' to show the status of a single LED");
-            System.out.println("Enter 'set' to modify a LED");
-            System.out.println("Enter 'turnOff' to modify a LED");
+            System.out.println("Enter 'setled' to modify a LED");
             System.out.println("Enter 'exit' to exit the program");
             input = reader.readLine();
 
@@ -42,7 +41,7 @@ public class Main {
                     System.out.println("Invalid ID");
                 }
 
-            } else if (input.equalsIgnoreCase("set")) {
+            } else if (input.equalsIgnoreCase("setled")) {
                 System.out.println("Please specify LED ID:");
                 int id = Integer.parseInt(reader.readLine());
 
